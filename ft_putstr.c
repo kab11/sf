@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfranco <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/17 22:15:01 by cfranco           #+#    #+#             */
-/*   Updated: 2018/01/17 22:15:07 by cfranco          ###   ########.fr       */
+/*   Created: 2018/01/11 19:43:52 by cfranco           #+#    #+#             */
+/*   Updated: 2018/01/15 19:01:22 by cfranco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bsq.h"
 
-void	ft_putchar(char c)
+void	ft_putstr(char *str)
 {
-	write(1, &c, 1);
-	return ;
+	int i;
+
+	i = 0;
+	while (*str != '\n')
+		str++;
+	write(1, str, ft_strlen(str));
+	ft_putchar('\n');
 }

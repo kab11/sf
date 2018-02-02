@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   eval-expr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cfranco <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/17 22:15:01 by cfranco           #+#    #+#             */
-/*   Updated: 2018/01/17 22:15:07 by cfranco          ###   ########.fr       */
+/*   Created: 2018/01/27 23:23:01 by kblack            #+#    #+#             */
+/*   Updated: 2018/01/27 23:26:31 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bsq.h"
+#include <unistd.h>
+#include <stdlib.h>
 
-void	ft_putchar(char c)
+int eval_expr(char *str)
 {
-	write(1, &c, 1);
-	return ;
+
+}
+
+int main(int ac, char **av)
+{
+	if (ac > 1)
+	{
+		ft_putnbr(eval_expr(av[1]));
+		ft_putchar(’\n’);
+	}
+	return (0);
 }
